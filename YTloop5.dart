@@ -7,7 +7,7 @@ void main() {
       stdout.write(" ");
     }
     for (int j = i; j <= n; j++) {
-      stdout.write("*");
+      stdout.write("* ");
     }
 
     stdout.writeln();
