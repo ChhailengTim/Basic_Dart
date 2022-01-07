@@ -42,6 +42,15 @@ void main() {
       case 2:
         print(store);
         break;
+      case 3:
+        stdout.write("Input search: ");
+//str=stdin.readLineSync()!;
+        store.getRange(str);
+        break;
+      case 4:
+        store.clear();
+        print(store);
+        break;
     }
   } while (ch != 0);
 }
