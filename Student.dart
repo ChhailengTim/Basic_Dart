@@ -1,11 +1,5 @@
 import 'dart:io';
 
-class info {
-  int? id;
-  String? name;
-  double? total;
-}
-
 void main() {
   int i;
   stdout.write("Input number of student to add: ");
@@ -22,5 +16,8 @@ void main() {
     stdout.write("Score of English: ");
     double? en = double.parse(stdin.readLineSync()!);
     double total = (kh + m + en) / 3;
+    if(total>85){
+      print('$id $name $total Grade "A" ');
+    }
   }
 }
