@@ -1,5 +1,7 @@
 import "dart:io";
 
+import 'dart:math';
+
 void Note() {
   print("Welcome to simple calculator!\n");
   print("0. Exit\n");
@@ -15,22 +17,6 @@ void Note() {
   print("10. Costan\n");
 }
 
-void input() {
-  stdout.write("input a:");
-  double? a = double.parse(stdin.readLineSync()!);
-  stdout.write("input b:");
-  double? b = double.parse(stdin.readLineSync()!);
-//double c=a+b;
-//print("$c");
-//double d=a-c;
-}
-
-double add(double a, double b) {
-  input();
-  double c;
-  return c = a + b;
-}
-
 void main() {
   Note();
   int? ch = 0;
@@ -39,12 +25,59 @@ void main() {
     int? ch = int.parse(stdin.readLineSync()!);
     switch (ch) {
       case 1:
-        add(0, 0);
-        print("$add");
+        stdout.write("input a:");
+        double? a = double.parse(stdin.readLineSync()!);
+        stdout.write("input b:");
+        double? b = double.parse(stdin.readLineSync()!);
+        double c = a + b;
+        print("$c");
         break;
       case 2:
-        input();
-        print(add);
+        stdout.write("input a:");
+        double? a = double.parse(stdin.readLineSync()!);
+        stdout.write("input b:");
+        double? b = double.parse(stdin.readLineSync()!);
+        double c = a - b;
+        print("$c");
+        break;
+      case 3:
+        stdout.write("input a:");
+        double? a = double.parse(stdin.readLineSync()!);
+        stdout.write("input b:");
+        double? b = double.parse(stdin.readLineSync()!);
+        double c = a * b;
+        print("$c");
+        break;
+      case 4:
+        stdout.write("input a:");
+        double? a = double.parse(stdin.readLineSync()!);
+        stdout.write("input b:");
+        double? b = double.parse(stdin.readLineSync()!);
+        double c = a / b;
+        print("$c");
+        break;
+      case 5:
+        stdout.write("input X:");
+        double? X = double.parse(stdin.readLineSync()!);
+        double f = exp(X);
+        print("$f");
+        break;
+      case 6:
+        int n1 = 0, n2 = 1, n3;
+        print(n1);
+        print(n2);
+
+        for (int i = 2; i <= 16; i++) {
+          n3 = n1 + n2;
+          print('$n3');
+          n1 = n2;
+          n2 = n3;
+        }
+        break;
+      case 7:
+        stdout.write("input a:");
+        double? a = double.parse(stdin.readLineSync()!);
+        double result = cos(180.0 * (pi / 180.0));
         break;
     }
   } while (ch != 0);
