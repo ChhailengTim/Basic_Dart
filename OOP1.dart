@@ -1,8 +1,8 @@
 import "dart:io";
 
 class Circle {
-  double radius = 1.0;
-  String color = "red";
+  double? radius;
+  String? color;
   circle(double radius) {
     this.radius;
     this.color;
@@ -10,11 +10,11 @@ class Circle {
 
   Circle(double setRadius, String setColor) {}
 
-  double getRadius() {
+  double? getRadius() {
     return radius;
   }
 
-  String getColor() {
+  String? getColor() {
     return color;
   }
 
@@ -25,10 +25,16 @@ class Circle {
   void setColor(String color) {
     this.color = color;
   }
+
+  void Display() {
+    getRadius();
+    getColor();
+    print("Radius: $getRadius");
+    print("Color: $getColor");
+  }
 }
 
 void main() {
-  Circle c = new Circle(1.0, "red");
-//c=Circle(1.0,"red");
-  print(c.getRadius);
+  var test = new Circle(1.0, "red");
+  test.Display();
 }
