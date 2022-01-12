@@ -17,7 +17,7 @@ void main() {
     print("Customer must charge: ${charge}R ");
   } else if (n > 400 && n < 600) {
     charge = n * 1500;
-    print("Customer msut charge: ${charge}R ");
+    print("Customer must charge: ${charge}R ");
   } else if (n > 600) {
     charge = n * 2000;
     print("Customer must charge: ${charge}R ");

@@ -44,8 +44,8 @@ void main() {
         break;
       case 3:
         stdout.write("Input search: ");
-//str=stdin.readLineSync()!;
-        store.getRange(str);
+        str=stdin.readLineSync();
+        store.add(str);
         break;
       case 4:
         store.clear();
