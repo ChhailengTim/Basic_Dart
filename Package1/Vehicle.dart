@@ -8,4 +8,10 @@ class Vehicle{
     this.type=type;
     this.name=name;
   }
+  void Display(){
+    print("Brand: ${brand}");
+    print("Type: ${type}");
+    print("Name: ${name}");
+  }
 }
+
