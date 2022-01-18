@@ -10,8 +10,10 @@ class RegisterVehicle extends Vehicle{
     this.weight=weight;
   }
   void Display(){
+    super.Display();
     print("Year: ${year}");
     print("Use: ${use}");
     print("Weight: ${weight}");
+    print("=================");
   }
 }
