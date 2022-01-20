@@ -1,3 +1,4 @@
+import 'Employee.dart';
 import 'ITStudent.dart';
 import 'MathStudent.dart';
 import 'Person.dart';
@@ -13,7 +14,10 @@ void main(){
   //ITStudent I=new ITStudent("Chhaileng", "Male", 23, "Information Technology", 5.5, "E7", "Chenda Sovisal", 101, "Night");
   //I.Display();
   //print("==================");
-  MathStudent m=new MathStudent("Roth", "Female", 21, "Mathematics", 4.3, "B", "Sok Somnang", 105, "Morning");
-  m.Display();
-  print("==================");
+  //MathStudent m=new MathStudent("Roth", "Female", 21, "Mathematics", 4.3, "B", "Sok Somnang", 105, "Morning");
+  //m.Display();
+  //print("==================");
+  Employee e=new Employee("Sovannara", "Male", 35, "Admin", "Electric Worker", 15);
+  e.Display();
+  print("====================");
 }
