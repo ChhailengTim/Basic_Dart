@@ -29,11 +29,11 @@ void main() {
   do{
     stdout.write("enter your choose:");
     String? ch=stdin.readLineSync();
-    var score=0;
+    List scores=[];
     switch(ch){
       case 'S':
         var choice = ['A', 'B', 'C', 'D'];
-        //var score = 0;
+        var score = 0;
         dynamic input;
         for (var i = 0; i < questions.length; i++) {
           print('${i + 1}. ${questions[i]}');
@@ -61,12 +61,14 @@ void main() {
           input == options[i][4]
               ? print('Correct!\n Score: ${score} \n')
               : print('Incorrect!\n Score: ${score} \n');
+
         }
         print('your scored ${score}/${questions.length}');
+        scores.add(score);
 
         break;
       case 'V':
-        print(score);
+        print(scores);
 
   }
 
