@@ -1,6 +1,13 @@
 void main(){
   int i=10;
-  int result;
-  result=i~/0;
-  print("Result: ${result}");
+  int? result;
+  try{
+    result=i~/0;
+  } on IntegerDivisionByZeroException{
+    print("Cannot be divided by zero");
+  }
+  catch(e){
+    print(e.toString());
+  }
+  //print("Result: ${result}");
 }
