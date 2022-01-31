@@ -1,8 +1,15 @@
+import 'dart:io';
+
 class Sweet1{
   int? n;
-  //double? sn;
+  double? sn;
 
-  double? getSweet(double n,double sn){
-    return sn=n*(n+1)/2;
-}
+  double? getSweet() {
+    return sn;
+  }
+  void setSweet(){
+    stdout.write("Enter n=");
+    int n=int.parse(stdin.readLineSync()!);
+    sn = n * (n + 1) / 2;
+  }
 }
